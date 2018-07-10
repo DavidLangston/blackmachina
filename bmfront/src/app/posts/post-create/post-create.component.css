@@ -1,0 +1,17 @@
+mat-form-field,
+textarea {
+  width: 100%;
+}
+#matbutton {
+	display: block;
+	margin: auto;
+/*  position: relative;
+  left: 45%;   */
+}
+.link-btn /deep/ .mat-button-focus-overlay {
+    background-color:transparent;
+}
+
+#matbutton:active, :hover {
+    color: black;
+}

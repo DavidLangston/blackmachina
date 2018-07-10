@@ -1,0 +1,16 @@
+<div style="text-align:center; margin-top: 20px" >
+
+  <div class="row">
+    <div class="col-xs-4"><label>IP Location</label></div>
+    <div class="col-xs-4"><label>Date</label></div>
+    <div class="col-xs-4"><label>Time PST</label></div>
+  </div>
+
+  <div class="row" *ngFor="let post of posts; let i = index" (hover)="onHoverMessage(id)" [routerLink]="['/decrypt-message', i]" id="record">
+    <!-- <a (hover)="onHoverMessage(id)" [routerLink]="['/decrypt-message', i]"> -->
+      <div class="col-xs-4" >{{ post.location }}</div>
+      <div class="col-xs-4">{{ post.timestamp | date : "shortDate"  }}</div>
+      <div class="col-xs-4">&nbsp;&nbsp;&nbsp;&nbsp; {{ post.timestamp | date : "shortTime"  }}</div>
+    <!-- </a> -->
+  </div>
+</div>

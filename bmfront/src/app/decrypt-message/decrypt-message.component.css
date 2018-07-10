@@ -1,0 +1,20 @@
+mat-form-field,
+textarea {
+  width: 100%;
+}
+#matbutton {
+	display: block;
+	margin: auto;
+/*  position: relative;
+  left: 45%;   */
+}
+
+#matbutton:active, :hover {
+    color: black;
+}
+
+#record:hover {
+	color:red;
+	cursor: pointer;
+	text-decoration: none;
+}

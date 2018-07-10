@@ -1,0 +1,54 @@
+/* unvisited link */
+a {
+	text-decoration: none;
+	color: white;
+}
+
+/* selected link */
+a:active {
+    color: white;
+}
+
+nav {
+	color:white;
+	font-size: x-large;
+}
+
+@media (max-width: 535px) {
+	.cleardiv	{
+		display:none;
+	}
+}
+/* @media (max-width: 610px) {
+	 #textsize {
+		font-size: x-large;
+	} 
+} */
+@media (min-width: 411px) {
+	.fa .fa-bars {
+		display: none;
+	}
+}
+
+.fa:hover {
+	color:#D3D3D3 !important;
+	cursor:pointer;
+}
+
+/* .dropdown:hover .dropdown-menu {
+	display: block;
+	float:left;
+} */
+
+.btn, .dropdown-toggle {
+	color:white;
+}
+
+.dropdown-toggle::after {
+    display:none;
+}
+
+a:hover {
+	color:#D3D3D3 !important;
+}
+

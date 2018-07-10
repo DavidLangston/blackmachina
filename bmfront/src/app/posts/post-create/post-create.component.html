@@ -1,0 +1,40 @@
+<p style="font-size: xx-large;font-weight:100">Leave a message</p>
+
+
+<mat-card style="margin-top: 10px">
+  <form (ngSubmit)="onAddPost(postForm)" #postForm="ngForm">
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="title"
+        ngModel
+        required
+        minlength="3"
+        placeholder="Title: "
+        #title="ngModel">
+      <mat-error *ngIf="title.invalid">Please enter a title.</mat-error>
+    </mat-form-field>
+ 
+    <mat-form-field>
+      <textarea
+        matInput
+        rows="4"
+        name="content"
+        ngModel
+        required
+        placeholder="Content:"
+        #content="ngModel"></textarea>
+      <mat-error *ngIf="content.invalid">Enter a message to encrypt</mat-error>
+    </mat-form-field>
+    <button
+      style="border-color: white"
+      id="matbutton"
+      mat-raised-button
+      color=""
+      type="ngSubmit">Encrypt</button>
+  </form>
+</mat-card>
+
+
+

@@ -1,0 +1,28 @@
+:host {
+  display: block;
+  margin-top: 1rem;
+}
+
+.info-text {
+  text-align: center;
+}
+
+#insertkey {
+  display: block;
+  margin-right: 1rem;
+}
+
+
+p {
+	word-break: break-all;
+}
+
+a {
+	color:black;
+}
+
+#record:hover {
+	color:red;
+	cursor: pointer;
+	text-decoration: none;
+}

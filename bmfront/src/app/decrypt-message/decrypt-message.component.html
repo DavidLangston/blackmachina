@@ -1,0 +1,44 @@
+<label style="font-size: xx-large; font-weight: 400">Decrypt message</label>
+
+
+<div style="margin-top: 20px" >
+	<div class="row">
+				<div class="col-xs-4"><label>IP Location</label></div>
+				<div class="col-xs-4" style="text-align: center"><label>Date</label></div>
+				<div class="col-xs-4" style="text-align: right;"><label>Time PST</label></div>
+	</div>
+
+	<div class="row" style="margin-top: 10px; color:red">
+				  <div class="col-xs-4">&nbsp;&nbsp;{{ post.location }}</div>
+			      <div class="col-xs-4" style="text-align: center">{{ post.timestamp | date : "shortDate"  }}</div>
+			      <div class="col-xs-4" style="text-align: right">&nbsp;&nbsp;&nbsp;&nbsp; {{ post.timestamp | date : "shortTime"  }}</div>
+	</div>
+
+	<mat-card style="margin-top: 30px">
+		{{ post.title}}: {{ post.content }}
+	</mat-card>
+	<mat-card style="margin-top: 30px">
+		<mat-form-field style="padding-top: 0px">
+	      <textarea
+	        matInput
+	        rows="2"
+	        name="content"
+	        ngModel
+	        required
+	        placeholder="Enter access key"
+	        #content="ngModel"></textarea>
+	      <mat-error *ngIf="content.invalid">Enter key here to decrypt message</mat-error>
+	    </mat-form-field>
+	</mat-card>
+
+	<div style="text-align: center; margin-top: 10px">
+		<form>
+		<button 
+		id="matButton"
+		mat-raised-button
+		type="ngSubmit">Decrypt</button>
+		</form>
+	</div>
+	<mat-card style="margin-top: 40px;margin-bottom: 60px"></mat-card>
+
+</div>
